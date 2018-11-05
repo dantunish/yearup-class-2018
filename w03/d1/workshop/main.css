@@ -1,0 +1,36 @@
+h1{
+  color: blue;
+}
+#sec_1{
+  background-color: #bdc3c7;
+  height: 800px;
+}
+#sec_2{
+  background-color: #2980b9;
+  height: 800px;
+}
+#sec_3{
+  background-color: #9b59b6;
+  height: 800px;
+}
+#sec_4{
+  background-color: #f1c40f;
+  height: 800px;
+}
+img{
+  height: 200px;
+  width: 400px;
+}
+.div_1{
+  display: flex;
+  align-items: center;
+}
+.hidden{
+  opacity: 0;
+}
+.show{
+  animation: fade .6s;
+}@keyframes fade {
+  0% {opacity: 0};
+  100%{opacity: 1};
+}
