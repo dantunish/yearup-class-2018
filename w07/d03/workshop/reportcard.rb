@@ -1,5 +1,5 @@
 class Reportcard
-
+attr_accessor :grades
   def initialize
     @grades = {}
   end

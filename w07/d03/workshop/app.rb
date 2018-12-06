@@ -1,4 +1,5 @@
 require 'faker'
+require 'pry'
 require './student'
 require './classroom'
 require './grade'
@@ -11,13 +12,11 @@ require './grade'
 
 def genStudent
   s = Student.new(Faker::Name::name, rand(11..20))
-  s.reportcard.addGrade(Grade.new("math", rand(0..100)))
-  s.reportcard.addGrade(Grade.new("history", rand(0..100)))
-  s.reportcard.addGrade(Grade.new("english", rand(0..100)))
-  s.reportcard.addGrade(Grade.new("science", rand(0..100)))
-  s
+  s.reportcard.new.addGrade(Grade.new("math", rand(0..100)))
+  s.reportcard.new.addGrade(Grade.new("history", rand(0..100)))
+  s.reportcard.new.addGrade(Grade.new("english", rand(0..100)))
+  s.reportcard.new.addGrade(Grade.new("science", rand(0..100)))
 end
-
 # Generate our students
 1..25.times do |i|
   @A.addStudent(genStudent())

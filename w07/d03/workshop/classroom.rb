@@ -20,5 +20,5 @@ class Classroom
       puts "#{value.name}: #{value.age}"
     end
   end
-
 end
+
