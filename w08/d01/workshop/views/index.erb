@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Google: Our Savior</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="public/main.css" />
+    <script src="public/main.js"></script>
+</head>
+<body>
+    <h1> Google, Our Savior, Has Graced Us With Its Collection of Books.<br>
+    Input A Title</h1>
+    <form action="/goo" method="POST">
+        <input name="query">
+        <button>Search</button>
+    </form>
+
+<% @books.each do |book| %>
+    <div class="card d-inline-block" style="width: 18rem;">
+    <% if book.image_link %>
+        <img class="card-img-top" src="<%= book.image_link %>" alt="Card image cap">
+    <% end %>
+        <div class="card-body">
+                <h5 class="card-title"><%= book.authors %></h5>
+                <p class="card-text"><%= book.description %> 
+                <br> 
+                ISBN: <%= book.isbn %></p>
+            <a target="_blank" href="<%= book.info_link %>" class="btn btn-primary">
+            <%= book.title %></a>
+        </div>
+    </div>
+<% end %>
+
+</body>
+</html>
