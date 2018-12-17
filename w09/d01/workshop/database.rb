@@ -16,5 +16,8 @@ ActiveRecord::Base.establish_connection(
   adapter: 'sqlite3',
   database: 'db/carson.db'
 )
+CSV.foreach("path/to/file.csv") do |row|
+  puts row
+end
 
 binding.pry
