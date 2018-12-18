@@ -1,7 +1,7 @@
 
-class Customers < ActiveRecord::Migration[5.0]
+class CreateCustomers < ActiveRecord::Migration[5.0]
     def up
-      create_table :customers do |t|
+      create_table :Customers do |t|
         t.string :first_name
         t.string :last_name
         t.string :email
@@ -11,7 +11,7 @@ class Customers < ActiveRecord::Migration[5.0]
     end
   
     def down
-      drop_table :customers
+      drop_table :Customers
     end
   end
   
